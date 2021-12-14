@@ -15,6 +15,17 @@ const Counter = () => {
     e.preventDefault();
     dispatch(actions.decrease(amount));
   };
+  const handleAsyncIncrease = (e: any, amount: number) => {
+    e.preventDefault();
+    dispatch(actions.asyncIncrease(amount));
+  };
+  const handleAsyncDecrease = (e: any, amount: number) => {
+    e.preventDefault();
+    dispatch(actions.asyncDecrease(amount));
+  };
+  const handleReset = () => {
+    dispatch(actions.reset());
+  };
   return (
     <div>
       카운터 tsx
@@ -22,8 +33,10 @@ const Counter = () => {
         count={currnetNum}
         increase={hadleIncrease}
         decrease={handleDecrease}
+        asyncIncrease={handleAsyncIncrease}
+        asyncDecrease={handleAsyncDecrease}
       ></CounterView>
-      <button>리셋버튼</button>
+      <button onClick={handleReset}>리셋버튼</button>
     </div>
   );
 };

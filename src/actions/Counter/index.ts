@@ -11,4 +11,14 @@ export const decrease = createAction(
   (amount: number) => ({ payload: amount })
 );
 
+export const asyncIncrease = createAction(
+  actionTypes.ASYNC_INCREASE_COUNT,
+  (amount: number) => ({ payload: amount })
+);
+
+export const asyncDecrease = createAction(
+  actionTypes.ASYNC_DECREASE_COUNT,
+  (amount: number) => ({ payload: amount })
+);
+
 export const reset = createAction(actionTypes.RESET_COUNT);
