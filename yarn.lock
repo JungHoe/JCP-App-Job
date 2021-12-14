@@ -497,6 +497,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^16.11.12":
+  version: 16.11.12
+  resolution: "@types/node@npm:16.11.12"
+  checksum: a3feb346d61a56f5a137c29bb8c63cfa3cc02e184b9dffdc18ef1528dcce55596e570575215a2e39e6ce69343eeb2a5ba71c271938f1dc8db4cc393902855412
+  languageName: node
+  linkType: hard
+
 "@types/parse5@npm:*":
   version: 6.0.3
   resolution: "@types/parse5@npm:6.0.3"
@@ -3177,6 +3184,7 @@ __metadata:
   dependencies:
     "@craftamap/esbuild-plugin-html": ^0.2.1
     "@reduxjs/toolkit": ^1.7.0
+    "@types/node": ^16.11.12
     "@types/react": ^17.0.37
     "@types/react-dom": ^17.0.11
     "@types/react-redux": ^7.1.20

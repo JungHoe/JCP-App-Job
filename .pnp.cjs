@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@craftamap/esbuild-plugin-html", "virtual:86c859a9c4762ed5cdf86f852e93fbcc75a09821c3b37b8ad0eb4d7d9cbb22aabaa46727e28a8529186753e9999138117cf6ff00bb24c2e980f48b27d754daf4#npm:0.2.1"],
             ["@reduxjs/toolkit", "virtual:86c859a9c4762ed5cdf86f852e93fbcc75a09821c3b37b8ad0eb4d7d9cbb22aabaa46727e28a8529186753e9999138117cf6ff00bb24c2e980f48b27d754daf4#npm:1.7.0"],
+            ["@types/node", "npm:16.11.12"],
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
             ["@types/react-redux", "npm:7.1.20"],
@@ -664,6 +665,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-16.11.11-d8efa4328b-1c472bd63f.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:16.11.11"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:16.11.12", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.11.12-0c51fb0c8d-a3feb346d6.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:16.11.12"]
           ],
           "linkType": "HARD",
         }]
@@ -3712,6 +3720,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["junghoe-reactTS-boilerPlate", "workspace:."],
             ["@craftamap/esbuild-plugin-html", "virtual:86c859a9c4762ed5cdf86f852e93fbcc75a09821c3b37b8ad0eb4d7d9cbb22aabaa46727e28a8529186753e9999138117cf6ff00bb24c2e980f48b27d754daf4#npm:0.2.1"],
             ["@reduxjs/toolkit", "virtual:86c859a9c4762ed5cdf86f852e93fbcc75a09821c3b37b8ad0eb4d7d9cbb22aabaa46727e28a8529186753e9999138117cf6ff00bb24c2e980f48b27d754daf4#npm:1.7.0"],
+            ["@types/node", "npm:16.11.12"],
             ["@types/react", "npm:17.0.37"],
             ["@types/react-dom", "npm:17.0.11"],
             ["@types/react-redux", "npm:7.1.20"],

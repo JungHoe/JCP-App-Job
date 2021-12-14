@@ -5,7 +5,7 @@ const { pnpPlugin } = require("@yarnpkg/esbuild-plugin-pnp");
 
 (async () => {
   process.env.NODE_ENV = "development";
-  process.env.PORT = 3000;
+  process.env.PORT = "3000";
   const entryPoints = ["src/index.tsx"];
   const builder = await build({
     bundle: true,
@@ -31,8 +31,9 @@ const { pnpPlugin } = require("@yarnpkg/esbuild-plugin-pnp");
     // Opens the local server on start.
     open: false,
     // Uses `PORT=...` or 8080 as a fallback.
-    port: +process.env.PORT || 8080,
+    port: Number(process.env.PORT) || 8080,
     // Uses `public` as the local server folder.
+    file: "index.html",
     root: "public",
   });
 })();
