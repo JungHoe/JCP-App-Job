@@ -1,36 +1,38 @@
 import React from "react";
 import { RootStateOrAny, useSelector, useDispatch } from "react-redux";
-import * as actions from "../../actions/Counter";
+import { actions } from "../../Slice/Counter";
 
 import CounterView from "../../components/Counter";
 const Counter = () => {
   const dispatch = useDispatch();
-  const { currnetNum } = useSelector((state: RootStateOrAny) => state.counter);
+  const { currentCount } = useSelector(
+    (state: RootStateOrAny) => state.counter
+  );
 
   const hadleIncrease = (e: any, amount: number) => {
     e.preventDefault();
-    dispatch(actions.increase(amount));
+    dispatch(actions.increaseCount({ amount }));
   };
   const handleDecrease = (e: any, amount: number) => {
     e.preventDefault();
-    dispatch(actions.decrease(amount));
+    dispatch(actions.decreaseCount({ amount }));
   };
   const handleAsyncIncrease = (e: any, amount: number) => {
     e.preventDefault();
-    dispatch(actions.asyncIncrease(amount));
+    dispatch(actions.asyncIncreaseCount({ amount }));
   };
   const handleAsyncDecrease = (e: any, amount: number) => {
     e.preventDefault();
-    dispatch(actions.asyncDecrease(amount));
+    dispatch(actions.asyncDecreaseCount({ amount }));
   };
   const handleReset = () => {
-    dispatch(actions.reset());
+    dispatch(actions.resetCounter());
   };
   return (
     <div>
       카운터 tsx
       <CounterView
-        count={currnetNum}
+        count={currentCount}
         increase={hadleIncrease}
         decrease={handleDecrease}
         asyncIncrease={handleAsyncIncrease}

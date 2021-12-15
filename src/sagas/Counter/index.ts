@@ -1,24 +1,24 @@
 import { takeEvery, all, delay, put } from "redux-saga/effects";
-import * as actions from "../../actions/Counter";
+import { actions } from "../../Slice/Counter";
 
-interface countActionParams {
+interface changeParameter {
   type: string;
-  payload: number;
+  payload: { amount: number };
 }
 
-function* asyncIncrease(action: countActionParams) {
+function* asyncIncrease(action: changeParameter) {
   console.log("Hello Sagas!", action);
   yield delay(1000);
-  yield put(actions.increase(action.payload));
+  yield put(actions.increaseCount({ amount: action.payload.amount }));
 }
 
-function* asyncDecrease(action: countActionParams) {
+function* asyncDecrease(action: changeParameter) {
   console.log("Hello Sagas!", action);
   yield delay(1000);
-  yield put(actions.decrease(action.payload));
+  yield put(actions.decreaseCount({ amount: action.payload.amount }));
 }
 
 export default function* counterSaga() {
-  yield takeEvery(actions.asyncIncrease.toString(), asyncIncrease);
-  yield takeEvery(actions.asyncDecrease.toString(), asyncDecrease);
+  yield takeEvery(actions.asyncIncreaseCount.type, asyncIncrease);
+  yield takeEvery(actions.asyncDecreaseCount.type, asyncDecrease);
 }

@@ -4,12 +4,11 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Provider } from "react-redux";
 import createSagaMiddleware from "redux-saga";
 import { configureStore } from "@reduxjs/toolkit";
-import rootReducer from "./reducers";
-import rootSaga from "./sagas";
+import rootReducer from "./rootReducer";
+import rootSaga from "./rootSaga";
 import ErrorPage from "./components/ErrorPage";
 
 import Conter from "./containers/Counter";
-import * as countActions from "./actions/Counter";
 import JobManagement from "./containers/JobManagement";
 
 const Container = Styled.div`
