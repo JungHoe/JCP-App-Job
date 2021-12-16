@@ -9,6 +9,7 @@ import rootSaga from "./rootSaga";
 import ErrorPage from "./components/ErrorPage";
 
 import Conter from "./containers/Counter";
+import AtomicCounter from "./components/templates/Counter";
 import JobManagement from "./containers/JobManagement";
 
 const Container = Styled.div`
@@ -45,12 +46,19 @@ function App({ name }: AppProps) {
               <Link to="/counter">redux test COUNTER</Link>
             </li>
             <li>
-              <Link to="/asdf">errorPage</Link>
+              <Link to="/atomicCount">Atomic Counter Test</Link>
+            </li>
+            <li>
+              <Link to="/error">errorPage</Link>
             </li>
           </ul>
         </nav>
         <Routes>
           <Route path="counter" element={<Conter></Conter>}></Route>
+          <Route
+            path="atomicCount"
+            element={<AtomicCounter></AtomicCounter>}
+          ></Route>
           <Route path="/" element={<JobManagement></JobManagement>}></Route>
           <Route
             path="*"
