@@ -16,7 +16,8 @@ In my project, I used 3 steps atomic design
 
 # TODO
 ~~change design pattern to atomic design~~ 
- 1. fix esbuild pnp ant design error
+
+~~fix esbuild pnp ant design error~~
  1. fix esbuild dev server modules
     * when build failed server just fall down
  1. add storybook
